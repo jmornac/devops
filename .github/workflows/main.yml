@@ -24,7 +24,7 @@ jobs:
       - name: Build and test with Maven
         #run: mvn -B --update-snapshots
         #run: mvn -B package --file simple-api/pom.xml
-        run: mvn -B package 
+        run: mvn -B 
         working-directory: simple-api
  
 
