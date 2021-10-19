@@ -21,6 +21,6 @@ jobs:
           java-version: '11'
       
       - name: Build and test with Maven
-        run: mvn -B package --file simple-api/pom.xml
+        run: mvn -B package --file ./simple-api
  
 
