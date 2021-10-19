@@ -16,14 +16,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.3.3
-        run: git checkout
         
       - name: Set up JDK 11
         with:
-          distribution: 'zulu'
+          distribution: 'adopt'
           java-version: '11'
       
       - name: Build and test with Maven
-        run: mvn clean test
+        run: mvn clean verify --file /simple-api/pom.xml
  
 
