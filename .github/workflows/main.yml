@@ -28,7 +28,6 @@ jobs:
         #working-directory: simple-api
       - name: Run Sonar
         env: GITHUB_TOKEN:${{secrets.TOKEN_GITHUB}}
-             SONAR_TOKEN:${{secrets.SONAR_TOKEN}}
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=jmornac_devops -Dsonar.organization=jmornac -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
 
  
