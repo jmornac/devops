@@ -26,6 +26,9 @@ jobs:
         run: mvn -B package --file simple-api/pom.xml
         #run: mvn -B 
         #working-directory: simple-api
+      - name: Run Sonar
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=jmornac_devops -Dsonar.organization=jmornac -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
+
  
  
       - name: Login to Docker Hub
